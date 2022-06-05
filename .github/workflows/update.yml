@@ -34,6 +34,11 @@ jobs:
 
       - name: Install dependencies
         run: yarn --non-interactive --no-progress --frozen-lockfile
+      
+      - name: Set Git credentials
+        run: | 
+          git config --global user.name ${{ secrets.GIT_USER }}
+          git config --global user.email ${{ secrets.GIT_EMAIL }}
         
       - name: Update examples
         run: yarn update:examples ${{ github.event.inputs.version }}
@@ -45,13 +50,8 @@ jobs:
         run: yarn --non-interactive --no-progress
         
       - name: Commit updates
-        run: |
-          git config --global user.name ${{ secrets.GIT_USER }}
-          git config --global user.email ${{ secrets.GIT_EMAIL }}
+        run: | 
           git add . && git commit -m "chore: update dependencies"
         
       - name: Push the changes
-        run: |
-          git config --global user.name ${{ secrets.GIT_USER }}
-          git config --global user.email ${{ secrets.GIT_EMAIL }}
-          git push
+        run: git push
