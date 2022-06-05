@@ -154,7 +154,6 @@
       }
     }
   },
-  "defaultProject": "full-cycle-app",
   "cli": {
     "packageManager": "yarn"
   }
