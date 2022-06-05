@@ -14,7 +14,7 @@ function validateSingleTestRun() {
 
     IFS=';' read -ra testCommandArgs <<< "$testCommandArgsString";
     set -x;
-    ${testCommand} "${ngTestParams}" "${testCommandArgs[@]}" 2>&1 | tee tests.log;
+    ${testCommand} ${ngTestParams} "${testCommandArgs[@]}" 2>&1 | tee tests.log;
     set +x;
     if [[ ! -z ${additionalStep} ]]; then
         ${additionalStep}
@@ -64,9 +64,9 @@ function checkJunit() {
 }
 
 simpleAppTestOptions=(
-    "yarn test simple-app||1|1|3|3|||"
-    "yarn test simple-app|--testNamePattern=^AppComponent should create the app$|1|1|1|3|2||"
-    "yarn test simple-app|--reporters=default;--reporters=jest-junit|1|1|3|3||checkJunit"
+    "yarn test||1|1|3|3|||"
+    "yarn test|--testNamePattern=^AppComponent should create the app$|1|1|1|3|2||"
+    "yarn test|--reporters=default;--reporters=jest-junit|1|1|3|3||checkJunit"
 )
 
 multiAppTestOptions=(
