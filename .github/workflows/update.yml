@@ -34,11 +34,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn --non-interactive --no-progress --frozen-lockfile
-
-      #- name: Run CI scripts
-      #  run: yarn ci
-      - name: Update root package.json
-        run: yarn update:root ${{ github.event.inputs.version }}
         
       - name: Update builders
         run: yarn update:packages ${{ github.event.inputs.version }}
