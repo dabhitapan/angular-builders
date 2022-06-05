@@ -8,7 +8,13 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "jest": "jest"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": ["<rootDir>/setup-jest.ts"],
+    "globalSetup": "jest-preset-angular/global-setup"
   },
   "private": true,
   "dependencies": {
