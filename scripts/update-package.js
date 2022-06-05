@@ -14,7 +14,7 @@ const determineVersions = deps => {
   let newDeps = [];
   for (const [name, stable] of Object.entries(isStable)) {
     if (deps[name]) {
-      let versionRange = stable ? `^${version}.0.0` : `'>=0.${version}00.0 < 0.${version + 1}00.0'`;
+      let versionRange = stable ? `^${version}.0.0` : `>=0.${version}00.0 < 0.${version + 1}00.0`;
       console.log(`Found dependency ${name}, new version range is ${versionRange}`);
       newDeps.push({ name, versionRange });
     }
