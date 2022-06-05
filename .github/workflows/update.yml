@@ -47,14 +47,15 @@ jobs:
         run: yarn --non-interactive --no-progress
         
       - name: Commit updates
-        run: git add . && git commit -m "chore:\ update dependencies"
+        run: |
+          git config --global user.name ${{ secrets.GIT_USER }}
+          git config --global user.email ${{ secrets.GIT_EMAIL }}
+          git add . && git commit -m "chore:\ update dependencies"
         
       - name: Update examples
         run: yarn update:examples ${{ github.event.inputs.version }}
         
       - name: Push the changes
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config --global user.name ${{ secrets.GIT_USER }}
           git config --global user.email ${{ secrets.GIT_EMAIL }}
