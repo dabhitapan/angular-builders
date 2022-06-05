@@ -8,5 +8,8 @@
   "devDependencies": {
     "@angular-builders/bazel": "^13.1.2",
     "@angular/cli": "13.3.7"
+  },
+  "dependencies": {
+    "@angular/cli": "14"
   }
 }
