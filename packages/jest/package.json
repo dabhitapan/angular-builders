@@ -56,6 +56,6 @@
     "jest": "^28.1.0",
     "quicktype": "^15.0.260",
     "rimraf": "^3.0.2",
-    "typescript": "^4.5.4"
+    "typescript": "^4.6.4"
   }
 }
