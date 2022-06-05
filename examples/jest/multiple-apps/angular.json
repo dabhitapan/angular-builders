@@ -266,7 +266,6 @@
       }
     }
   },
-  "defaultProject": "my-first-app",
   "cli": {
     "packageManager": "yarn"
   }
