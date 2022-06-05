@@ -122,7 +122,6 @@
       }
     }
   },
-  "defaultProject": "simple-app",
   "cli": {
     "packageManager": "yarn"
   }
