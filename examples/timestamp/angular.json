@@ -139,7 +139,6 @@
       }
     }
   },
-  "defaultProject": "example",
   "cli": {
     "packageManager": "yarn"
   }
