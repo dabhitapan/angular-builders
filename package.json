@@ -18,7 +18,8 @@
     "**/@cypress/schematic/@angular-devkit/architect": ">=0.1400.0 < 0.1500.0",
     "**/@cypress/schematic/@angular-devkit/core": "^14",
     "**/@cypress/schematic/@angular-devkit/schematics": "^14",
-    "**/@cypress/schematic/@schematics/angular": "^14"
+    "**/@cypress/schematic/@schematics/angular": "^14",
+    "@angular-devkit/build-angular": "^14"
   },
   "author": "Evgeny Barabanov",
   "license": "MIT",
@@ -42,7 +43,6 @@
   "devDependencies": {
     "@commitlint/cli": "^16.0.0",
     "@commitlint/config-conventional": "^16.0.0",
-    "@angular/compiler-cli": "14.0.0",
     "@types/lodash": "^4.14.118",
     "@types/node": "^16.0.0",
     "husky": "^7.0.0",

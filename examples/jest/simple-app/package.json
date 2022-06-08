@@ -11,11 +11,6 @@
     "cypress:run": "cypress run",
     "jest": "jest"
   },
-  "jest": {
-    "preset": "jest-preset-angular",
-    "setupFilesAfterEnv": ["<rootDir>/setup-jest.ts"],
-    "globalSetup": "jest-preset-angular/global-setup"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "14.0.0",
